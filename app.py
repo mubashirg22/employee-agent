@@ -4,37 +4,33 @@ from datetime import datetime
 app = FastAPI()
 
 employees = {
-
 "1001": {
-    "name": "Mubashir",
-    "department": "Apigee",
-    "manager": "Surya",
-    "location": "Mumbai",
-    "employmentType": "Permanent",
-    "grade": "L4",
-    "status": "Active"
+"name": "Mubashir",
+"department": "Apigee",
+"manager": "Surya",
+"location": "Mumbai",
+"employmentType": "Permanent",
+"grade": "L4",
+"status": "Active"
 },
-
 "1002": {
-    "name": "John",
-    "department": "DevOps",
-    "manager": "Rahul",
-    "location": "Pune",
-    "employmentType": "Contractor",
-    "grade": "L2",
-    "status": "Active"
+"name": "John",
+"department": "DevOps",
+"manager": "Rahul",
+"location": "Pune",
+"employmentType": "Contractor",
+"grade": "L2",
+"status": "Active"
 },
-
 "1003": {
-    "name": "Sarah",
-    "department": "Security",
-    "manager": "Anita",
-    "location": "Bangalore",
-    "employmentType": "Permanent",
-    "grade": "L5",
-    "status": "Inactive"
+"name": "Sarah",
+"department": "Security",
+"manager": "Anita",
+"location": "Bangalore",
+"employmentType": "Permanent",
+"grade": "L5",
+"status": "Inactive"
 }
-
 }
 
 @app.get("/")
@@ -73,6 +69,4 @@ return {
     **employee,
     "servedBy": "employee-agent",
     "timestamp": str(datetime.now())
-}
-
 }
