@@ -4,13 +4,13 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-return {
+    return {
 "status": "running"
 }
 
 @app.get("/.well-known/agent.json")
 def agent_card():
-return {
+    return {
 "name": "employee-agent",
 "description": "Employee Information Agent",
 "version": "1.0",
@@ -48,7 +48,7 @@ employee = employee_data.get(
     }
 )
 
-return {
+    return {
     "employeeId": empid,
     "name": employee["name"],
     "department": employee["department"]
